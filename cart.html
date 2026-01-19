@@ -2,34 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Cart | MS Retro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Cart</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS (IMPORTANT PATH) -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-<header>
-  <h1>Your Cart</h1>
-  <a href="index.html" class="cart-link">⬅ Back to Shop</a>
+<header class="header">
+  <div class="logo">MS RETRO</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="#" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
 </header>
 
-<section class="cart-container">
-  <table>
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price (₹)</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="cart-items"></tbody>
-  </table>
+<section style="padding:60px;">
+  <h1>Your Cart</h1>
 
-  <h2 id="total-price">Total: ₹0</h2>
+  <div id="cart-items" style="margin-top:30px;"></div>
 
-  <button class="checkout-btn" onclick="checkout()">Checkout via WhatsApp</button>
+  <h2 style="margin-top:20px;">
+    Total: ₹<span id="cart-total">0</span>
+  </h2>
+
+  <a href="checkout.html" class="checkout-btn" style="margin-top:20px;">
+    Proceed to Checkout
+  </a>
 </section>
 
-<script src="script.js"></script>
+<footer class="footer">
+  <p>© 2026 MS Retro</p>
+</footer>
+
+<!-- JS (IMPORTANT PATHS) -->
+<script src="./js/data.js"></script>
+<script src="./js/cart.js"></script>
+
 </body>
 </html>
