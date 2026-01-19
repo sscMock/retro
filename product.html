@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product | MS Retro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">MS RETRO</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="#" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</a>
+  </nav>
+</header>
+
+<section class="product-page">
+  <div class="product-img">
+    <img id="prod-img" src="">
+  </div>
+
+  <div class="product-info">
+    <h1 id="prod-name"></h1>
+    <p class="price">₹<span id="prod-price"></span></p>
+
+    <div class="sizes">
+      <p>Select Size</p>
+      <button class="size-btn">S</button>
+      <button class="size-btn">M</button>
+      <button class="size-btn">L</button>
+      <button class="size-btn">XL</button>
+    </div>
+
+    <button class="add-btn" onclick="addCurrentProduct()">ADD TO CART</button>
+
+    <p class="desc">
+      Premium retro football jersey. Comfortable fit. Limited stock.
+    </p>
+  </div>
+</section>
+
+<!-- SLIDE CART -->
+<div class="cart-drawer" id="cartDrawer">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <p class="total">Total: ₹<span id="cart-total">0</span></p>
+  <a href="checkout.html" class="checkout-btn">Checkout</a>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>
